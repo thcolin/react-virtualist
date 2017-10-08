@@ -1,11 +1,8 @@
 {
   "name": "react-virtualist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "💀🚟 Dead-simple react virtual scroll library",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thcolin/react-virtualist.git"
-  },
+  "repository": "",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -36,7 +33,6 @@
   "author": "",
   "homepage": "",
   "license": "MIT",
-  "repository": "",
   "keywords": [
     "react",
     "virtual",
