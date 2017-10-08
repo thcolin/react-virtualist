@@ -1,7 +1,11 @@
 {
-  "name": "VirtuaList",
+  "name": "react-virtualist",
   "version": "1.0.0",
-  "description": "VirtuaList React component",
+  "description": "💀🚟 Dead-simple react virtual scroll library",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thcolin/react-virtualist.git"
+  },
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -20,18 +24,23 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": "15.x"
+    "prop-types": "15.x",
+    "react": "16.x"
   },
   "devDependencies": {
     "nwb": "0.18.x",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "author": "",
   "homepage": "",
   "license": "MIT",
   "repository": "",
   "keywords": [
-    "react-component"
+    "react",
+    "virtual",
+    "list",
+    "scroll"
   ]
 }
