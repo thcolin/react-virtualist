@@ -41,13 +41,25 @@ class List extends Component {
   }
 
   componentDidUpdate(props) {
-    const a = props.items
-    const b = this.props.items
+    const previous = props.items
+    const next = this.props.items
 
-    const gap = a.map((value, index) => value === b[index] ? null : index).filter(v => v)
-    const visible = gap.some(index => index >= this.state.start && index <= this.state.stop)
+    let diff = (previous.length !== next.length)
+    let recompute = false
+    let gap = false
+    let visible = false
 
-    if (a.length !== b.length || (gap.length > 0 && visible)) {
+    for (let index = 0; index < next.length; index++) {
+      gap = previous[index] !== next[index]
+      visible = index >= this.state.start && index <= this.state.stop
+
+      if (diff || (gap && visible)) {
+        recompute = true
+        break
+      }
+    }
+
+    if (recompute) {
       this.compute(true)
     }
   }

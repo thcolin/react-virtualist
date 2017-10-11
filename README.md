@@ -1,16 +1,16 @@
 # react-virtualist
 
-💀🚟 Just a dead-simple react library to render big list (`+100`) by rendering only visible elements (with a few offset of course)
+💀🚟 Just a dead-simple react library to render big list (`~1M`) by rendering only visible elements (with a few offset of course)
 
 ## Pros
 * Render only if needed & visible
 * Few dependencies (only `react` and `prop-types`)
-* Dead-simple (see `KISS`)
+* Dead-simple (see [KISS principle](https://en.wikipedia.org/wiki/KISS_principle))
 * Self-contained (no alteration on `parent`)
 * Scroll attached to `body`
 * Valid wrapper component `height`
 * No problems if `header` or `footer`
-* "Fast" update (use `vlid`, check a 10k items re-rendered every `20ms`)
+* "Fast" update (use `vlid`, check `complex` example with 1M items re-rendered every `100ms`, and try to scroll)
 * Configurable `offset`
 * Compatible with `placeholder`
 
@@ -18,7 +18,6 @@
 * Only `horizontal`
 * Only `body` scroll
 * Fixed item `height`
-* Quiet performant: +100k items begin to be hard to re-render (with `300ms`)
 
 ## Example
 *Tips: use a parent when rendering your item, specific item style can alter your component style & behavior*
