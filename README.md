@@ -90,7 +90,7 @@ class Complex extends Component {
         'eUw9aolPlog',
         'LtrUSZ-Kcns'
       ],
-      total: 10000 // suppose we're currently fetching others and we want placeholders for empty
+      total: 1000000 // suppose we're currently fetching others and we want placeholders for empty
     }
   }
 
@@ -105,14 +105,14 @@ class Complex extends Component {
       }
 
       this.setState(videos)
-    }, 20)
+    }, 100)
   }
 
   render(){
     return (
       <VirtuaList
-        height={200}
-        items={Array(this.state.total).fill(true).map((x, i) => this.state.videos[i] || null)}
+        height={20}
+        items={[].concat(this.state.videos, Array(this.state.total - this.state.videos.length).fill(null))}
         render={(id, row, style) => {
           return (
             <div key={row} style={Object.assign({ width: '100%' }, style)}>
