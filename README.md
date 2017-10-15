@@ -130,6 +130,14 @@ class Complex extends Component {
 }
 ```
 
+## Build
+Commit anything before running theses commands, then:
+* `npm build`
+* `npm version x.x.x`
+* `git push --tags`
+* `git push`
+* `npm publish`
+
 ## More
 * [Smooth Scrolling with VirtualScroll](http://www.everyday3d.com/blog/index.php/2014/08/18/smooth-scrolling-with-virtualscroll/)
 * [Virtual Scrolling](https://sergimansilla.com/blog/virtual-scrolling/)
