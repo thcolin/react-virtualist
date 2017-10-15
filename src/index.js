@@ -33,6 +33,8 @@ class List extends Component {
   componentDidMount() {
     window.addEventListener('scroll', () => this.compute())
     window.addEventListener('resize', () => this.compute())
+
+    this.compute(true)
   }
 
   componentWillUnmount() {
