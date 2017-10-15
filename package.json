@@ -1,6 +1,6 @@
 {
   "name": "react-virtualist",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "💀🚟 Dead-simple react virtual scroll library",
   "repository": "",
   "main": "lib/index.js",
