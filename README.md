@@ -132,10 +132,10 @@ class Complex extends Component {
 
 ## Build
 Commit anything before running theses commands, then:
-* `npm build`
+* `npm run build`
 * `npm version x.x.x`
-* `git push --tags`
 * `git push`
+* `git push --tags`
 * `npm publish`
 
 ## More

@@ -26,20 +26,21 @@ class List extends Component {
       node: {}
     }
 
+    this.handleScroll = this.handleScroll.bind(this)
     this.handleRef = this.handleRef.bind(this)
     this.compute = this.compute.bind(this)
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', () => this.compute())
-    window.addEventListener('resize', () => this.compute())
+    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('resize', this.handleScroll)
 
     this.compute(true)
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', () => this.compute())
-    window.removeEventListener('resize', () => this.compute())
+    window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('resize', this.handleScroll)
   }
 
   componentDidUpdate(props) {
@@ -64,6 +65,10 @@ class List extends Component {
     if (recompute) {
       this.compute(true)
     }
+  }
+
+  handleScroll(e) {
+    this.compute()
   }
 
   handleRef(node) {
