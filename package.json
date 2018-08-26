@@ -25,10 +25,10 @@
     "react": "16.x"
   },
   "devDependencies": {
-    "nwb": "0.18.x",
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "nwb": "0.23.x",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
   },
   "author": "",
   "homepage": "",
