@@ -58,7 +58,7 @@ class Complex extends Component {
         'eUw9aolPlog',
         'LtrUSZ-Kcns'
       ],
-      total: 1000000 // suppose we're currently fetching others and we want placeholders for empty
+      total: 100000 // suppose we're currently fetching others and we want placeholders for empty
     }
   }
 
