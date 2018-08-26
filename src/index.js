@@ -23,11 +23,13 @@ class List extends Component {
       fragment: [],
       start: 0,
       stop: 0,
-      node: {}
+    }
+
+    this.references = {
+      element: React.createRef()
     }
 
     this.handleScroll = this.handleScroll.bind(this)
-    this.handleRef = this.handleRef.bind(this)
     this.compute = this.compute.bind(this)
   }
 
@@ -71,17 +73,13 @@ class List extends Component {
     this.compute()
   }
 
-  handleRef(node) {
-    this.setState({ node })
-  }
-
   compute(force = false) {
     const fragment = []
 
     const total = this.props.items.length
 
     const height = Math.max(window.innerHeight, 320)
-    const top = Math.min(Math.max(window.pageYOffset - (this.state.node.offsetTop || 0), 0), Math.max((this.props.height * total) - height, 0))
+    const top = Math.min(Math.max(window.pageYOffset - (this.references.element.current.offsetTop || 0), 0), Math.max((this.props.height * total) - height, 0))
     const bottom = top + height
 
     const count = Math.ceil(height / this.props.height)
@@ -112,7 +110,7 @@ class List extends Component {
     }
 
     return (
-      <div ref={this.handleRef} className={this.props.className} style={Object.assign({}, this.props.style, style)}>
+      <div ref={this.references.element} className={this.props.className} style={Object.assign({}, this.props.style, style)}>
         { this.state.fragment }
       </div>
     )
