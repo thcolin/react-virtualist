@@ -1,5 +1,8 @@
 # react-virtualist
 
+[![Build Status](https://travis-ci.org/thcolin/react-virtualist.svg?branch=master)](https://travis-ci.org/thcolin/react-virtualist)
+[![Greenkeeper badge](https://badges.greenkeeper.io/thcolin/react-virtualist.svg)](https://greenkeeper.io/)
+
 💀🚟 Just a dead-simple react library to render big list (`~1M`) by rendering only visible elements (with a few offset of course)
 
 ## Pros
