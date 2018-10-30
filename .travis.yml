@@ -1,18 +1,14 @@
-sudo: false
-
 language: node_js
 node_js:
-  - 8
-  - 9
   - 10
-
-before_install:
-  - npm install codecov.io coveralls
-
-after_success:
-  - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
-
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
+install:
+  - npm ci
+script:
+  - npm test
 branches:
   only:
     - master

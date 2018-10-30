@@ -4,4 +4,5 @@
 /lib
 /node_modules
 /umd
+/cypress/videos
 npm-debug.log*
