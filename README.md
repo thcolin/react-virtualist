@@ -10,7 +10,7 @@
 * Scroll attached to `body`
 * Valid wrapper component `height`
 * No problems if `header` or `footer`
-* "Fast" update (use `vlid`, check `complex` example with 1M items re-rendered every `100ms`, and try to scroll)
+* "Fast" update (check `complex` example with 1M items re-rendered every `100ms`, and try to scroll)
 * Configurable `offset`
 * Compatible with `placeholder`
 
@@ -52,7 +52,7 @@ class Simple extends Component {
           ]}
           render={(actor, index, style) => {
             return (
-              <div key={index} style={Object.assign({ background: 'red' }, style)} vlid={'vlid' + index}>
+              <div key={index} style={Object.assign({ background: 'red' }, style)}>
                 <p>Hello #{actor}</p>
               </div>
             )

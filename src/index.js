@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 const propTypes = {
@@ -15,7 +15,7 @@ const defaultProps = {
   offset: 2
 }
 
-class List extends Component {
+class List extends PureComponent {
   constructor(props) {
     super(props)
 
@@ -90,8 +90,8 @@ class List extends Component {
       for (let i = start; i < stop; i++) {
         fragment.push(this.props.render(this.props.items[i], i, {
           position: 'absolute',
-          height: this.props.height + 'px',
-          top: (this.props.height * i) + 'px'
+          height: `${this.props.height}px`,
+          top: `${(this.props.height * i)}px`
         }))
       }
 
@@ -104,13 +104,14 @@ class List extends Component {
   }
 
   render() {
+    const { items, height, render, offset, ...props } = this.props
     const style = {
       position: 'relative',
-      height: (this.props.height * this.props.items.length) + 'px'
+      height: `${this.props.height * this.props.items.length}px`
     }
 
     return (
-      <div ref={this.references.element} className={this.props.className} style={Object.assign({}, this.props.style, style)}>
+      <div {...props} ref={this.references.element} style={{ ...this.props.style, ...style}}>
         { this.state.fragment }
       </div>
     )

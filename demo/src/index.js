@@ -7,7 +7,7 @@ class Simple extends Component {
   render(){
     return (
       <div>
-        <h1 style={{height: '200vh', background: 'green'}}>Header</h1>
+        <h1 style={{height: '200vh', background: 'green'}} data-test="feader">Header</h1>
         <VirtuaList
           height={100}
           items={[
@@ -28,13 +28,14 @@ class Simple extends Component {
           ]}
           render={(actor, index, style) => {
             return (
-              <div key={index} style={Object.assign({ background: 'red' }, style)} vlid={'vlid' + index}>
+              <div key={index} style={Object.assign({ background: 'red' }, style)} data-test={index}>
                 <p>Hello #{actor}</p>
               </div>
             )
           }}
+          data-test="actors"
         />
-        <h1 style={{height: '200vh', background: 'blue'}}>Footer</h1>
+        <h1 style={{height: '200vh', background: 'blue'}} data-test="footer">Footer</h1>
       </div>
     )
   }
@@ -83,7 +84,7 @@ class Complex extends Component {
         items={[].concat(this.state.videos, Array(this.state.total - this.state.videos.length).fill(null))}
         render={(id, row, style) => {
           return (
-            <div key={row} style={Object.assign({ width: '100%' }, style)}>
+            <div key={row} style={Object.assign({ width: '100%' }, style)} data-test={row}>
               { id ? <a href={ 'https://youtu.be/' + id }>{ id }</a> : <p>Fetching...</p> }
             </div>
           )
@@ -92,6 +93,7 @@ class Complex extends Component {
         style={{
           width: '100%'
         }}
+        data-test="youtube"
       />
     )
   }
